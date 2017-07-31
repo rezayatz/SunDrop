@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>desktop Application</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/dashboard.css" rel="stylesheet">
+		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+		<script>window.$ = window.jQuery = require('jquery');</script>    
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ie-viewport-bug-workaround.js"></script>
+
+	</head>
+	<body>
+	<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="#">Sign in <span class="sr-only">(current)</span></a></li>
+            <li><a href="myFiles.html">My files</a></li>
+            <li class="active"><a href="#">Upload</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h1 class="page-header">Download a file</h1>
+			<br/>
+			<br/>
+			<div class="row">
+			  <div class="col-lg-12">
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="File path...">
+				  <span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search a file to dowload</button>
+				  </span>
+				</div>
+			  </div>
+			</div>
+			<br/>
+				<div class="col-md-12 text-center">
+				<button type="button" class="btn btn-primary"><a href= "myFiles.html">Find</a></button>
+			</div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

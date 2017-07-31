@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>desktop Application</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/dashboard.css" rel="stylesheet">
+
+		<script>window.$ = window.jQuery = require('jquery');</script>    
+		<script src="js/bootstrap.min.js"></script>
+		<script src="globalOauth.js"></script>
+	    <script src="myFiles.js"></script>
+
+
+	</head>
+	<body>
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+			  <ul class="nav nav-sidebar">
+				<li><a href="#">Sign in <span class="sr-only">(current)</span></a></li>
+				<li class="active"><a href="#">My files</a></li>
+				<li><a href="downloadedFiles.html">Downloaded Files</a></li>
+			  </ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
+				<h1 class="page-header">My Files</h1>
+				
+				<ol id="b" class="breadcrumb">
+				  <li class="active">My files</li>
+				</ol>
+				
+				<div class="alert alert-info" role="alert">
+				Upload a file in this directory:
+				<br/>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="actual-file" placeholder="File path...">
+				  <span class="input-group-btn">
+					<button class="btn btn-default" id="select-file" type="button">Choose a file and Encrypt it!</button>
+				  </span>
+				</div>
+				
+				<form id="upload-form" enctype="multipart/form-data">
+					<input type="hidden" id="parent" name="parentDir">
+					<input type="file" class="form-control" id="actual-file" name="file" value="" accept=".enc.txt">
+					<input type="text" class="form-control" id="actual-file-name" name="name" placeholder="Name..." >
+					<button class="btn btn-default" id="upload-btn">Upload</button>
+				</form>
+				</div>
+
+			<div class="alert alert-info" role="alert">
+				Create a directory here:
+				<br/>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="dirName" placeholder="Directory name...">
+				  <span class="input-group-btn">
+					<button class="btn btn-default" id="create-btn" type="button">Create directoy</button>
+				  </span>
+				</div>
+			</div>
+			<div id="content">
+			</div>
+		  </div>
+
+		</div>
+	</body>
+</html>
